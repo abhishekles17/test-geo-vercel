@@ -14,12 +14,14 @@ export async function middleware(req: NextRequest) {
 //   const path  = req.nextUrl.pathname
 
 console.log(country,city,region,"geolocation2")
+console.log(req.url)
+console.log(new URL(`/bst-es1?country=${country}&city=${city}`, req.url))
 
 //   url.searchParams.set('country', country)
 //   url.searchParams.set('city', city)
 //   url.searchParams.set('region', region)
 
-  return  NextResponse.rewrite(new URL(`/bst-es1?country=${country}&city=${city}`, req.url))
+  return  NextResponse.rewrite(url)
  
 }
 
