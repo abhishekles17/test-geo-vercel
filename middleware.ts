@@ -27,7 +27,7 @@ const geoLocation:any = {
   region:region
 }
 
-   const res = NextResponse.redirect(url)
+   const res = NextResponse.rewrite(url)
    res.cookies.set("geoLocation", geoLocation);
    return res;
  
