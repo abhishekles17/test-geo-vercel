@@ -19,7 +19,7 @@ console.log(country,city,region,"geolocation")
 //   url.searchParams.set('city', city)
 //   url.searchParams.set('region', region)
 
-  return NextResponse.rewrite(url+`?country=${country}&city=${city}&region=${region}`)
+  return  NextResponse.rewrite(new URL(`/bst-es1?country=${country}&city=${city}`, req.url))
  
 }
 
