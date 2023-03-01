@@ -29,7 +29,7 @@ const geoLocation:any = {
 
 
    const res = NextResponse.rewrite(url)
-   res.cookies.set("location",`city:${city},country:${country},region:${region}`);
+   res.cookies.set("location",`${city}_${country}_${region}`);
    return res;
  
 }
