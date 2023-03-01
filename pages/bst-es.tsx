@@ -3,7 +3,8 @@ import { useEffect } from "react";
 const Bst = ({ }) => {
   useEffect(() => {
     console.log(window.location.search);
-    const doc = document;
+    const doc = document.cookie;
+    console.log(doc)
     // let params = new URL(doc.location).searchParams;
     // console.log("geolocation")
     // console.log(params);

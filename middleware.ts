@@ -27,8 +27,9 @@ const geoLocation:any = {
   region:region
 }
 
+
    const res = NextResponse.rewrite(url)
-   res.cookies.set("geoLocation", JSON.stringify(geoLocation));
+   res.cookies.set("location",`city:${city},country:${country},region:${region}`);
    return res;
  
 }
