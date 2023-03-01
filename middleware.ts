@@ -13,7 +13,7 @@ export async function middleware(req: NextRequest) {
 
 //   const path  = req.nextUrl.pathname
 
-console.log(country,city,region,"geolocation")
+console.log(country,city,region,"geolocation2")
 
 //   url.searchParams.set('country', country)
 //   url.searchParams.set('city', city)
