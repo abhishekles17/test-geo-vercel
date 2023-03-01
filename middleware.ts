@@ -6,9 +6,10 @@ export const config = {
 
 export async function middleware(req: NextRequest) {
   const { nextUrl: url, geo } = req
-  const country = geo.country || 'US'
-  const city = geo.city || 'San Francisco'
-  const region = geo.region || 'CA'
+  
+  const country =(geo && geo.country) || 'US'
+  const city = (geo && geo.city) || 'San Francisco'
+  const region = (geo && geo.region) || 'CA'
 
 //   const path  = req.nextUrl.pathname
 
