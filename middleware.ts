@@ -15,12 +15,11 @@ export async function middleware(req: NextRequest) {
 
 console.log(country,city,region,"geolocation")
 
-  url.searchParams.set('country', country)
-  url.searchParams.set('city', city)
-  url.searchParams.set('region', region)
+//   url.searchParams.set('country', country)
+//   url.searchParams.set('city', city)
+//   url.searchParams.set('region', region)
 
-  return NextResponse.rewrite(url)
-
+  return NextResponse.rewrite(url+`?country=${country}&city=${city}&region=${region}`)
  
 }
 
