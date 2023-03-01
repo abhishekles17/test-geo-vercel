@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 
-const Bst = ({ allPokemons }) => {
+const Bst = ({ }) => {
   useEffect(() => {
     console.log(window.location.search);
-    let params = new URL(document.location).searchParams;
-    console.log("geolocation")
-    console.log(params);
-    console.log(allPokemons);
+    const doc = document;
+    // let params = new URL(doc.location).searchParams;
+    // console.log("geolocation")
+    // console.log(params);
+    // console.log(allPokemons);
    
   }, []);
 
