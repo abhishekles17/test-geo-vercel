@@ -24,7 +24,7 @@ console.log(req.url)
 
 
    const res = NextResponse.rewrite(url)
-   res.cookies.set("location",`_${city}_${country}_${region}_2234`);
+   res.cookies.set("location",`_${city}_${country}_${region}_22324`);
    return res;
  
 }
