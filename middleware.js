@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export const config = {
-    matcher: '/bst-es',
+    matcher: ['/bst-es/'],
   }
 
 export async function middleware(req) {
