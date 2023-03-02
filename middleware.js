@@ -4,7 +4,7 @@ export const config = {
     matcher: '/bst-es',
   }
 
-export async function middleware(req: NextRequest) {
+export async function middleware(req) {
   const { nextUrl: url, geo } = req
   
   const country =(geo && geo.country) || 'US'
@@ -21,15 +21,10 @@ console.log(req.url)
 //   url.searchParams.set('city', city)
 //   url.searchParams.set('region', region)
 
-const geoLocation:any = {
-  city:city,
-  country:country,
-  region:region
-}
 
 
    const res = NextResponse.rewrite(url)
-   res.cookies.set("location",`${city}_${country}_${region}_ehjgkfl`);
+   res.cookies.set("location",`_${city}_${country}_${region}_2234`);
    return res;
  
 }
