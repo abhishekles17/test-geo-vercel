@@ -9,13 +9,9 @@ export async function middleware(req) {
 
 
   console.log(country, city, region, "geolocation3");
-  console.log(req.url);
 
-
-  const newUrl = url + `?city=${city}&country=${country}&region=${region}`;
-  console.log(newUrl);
-
-  const res = NextResponse.rewrite(newUrl);
+  const res = NextResponse.rewrite(url);
+  res.cookie("location",`?city=${city}&country=${country}&region=${region}`)
   console.log(`?city=${city}&country=${country}&region=${region}`);
   return res;
 }
