@@ -1,31 +1,21 @@
-import { NextRequest, NextResponse } from 'next/server'
-
-export const config = {
-    matcher: ['/bst-es/'],
-  }
+import { NextRequest, NextResponse } from "next/server";
 
 export async function middleware(req) {
-  const { nextUrl: url, geo } = req
-  
-  const country =(geo && geo.country) || 'US'
-  const city = (geo && geo.city) || 'San Francisco'
-  const region = (geo && geo.region) || 'CA'
+  const { nextUrl: url, geo } = req;
 
-//   const path  = req.nextUrl.pathname
+  const country = (geo && geo.country) || "US";
+  const city = (geo && geo.city) || "San Francisco";
+  const region = (geo && geo.region) || "CA";
 
 
-console.log(country,city,region,"geolocation3")
-console.log(req.url)
-
-//   url.searchParams.set('country', country)
-//   url.searchParams.set('city', city)
-//   url.searchParams.set('region', region)
+  console.log(country, city, region, "geolocation3");
+  console.log(req.url);
 
 
+  const newUrl = url + `?city=${city}&country=${country}&region=${region}`;
+  console.log(newUrl);
 
-   const res = NextResponse.rewrite(url)
-   res.cookies.set("location",`_${city}_${country}_${region}_22324`);
-   return res;
- 
+  const res = NextResponse.rewrite(newUrl);
+  console.log(`?city=${city}&country=${country}&region=${region}`);
+  return res;
 }
-
