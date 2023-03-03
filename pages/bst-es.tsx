@@ -5,6 +5,7 @@ const Bst = ({ }) => {
     console.log(window.location.search);
     const doc = document.cookie;
     console.log(doc)
+    alert(doc)
     // let params = new URL(doc.location).searchParams;
     // console.log("geolocation")
     // console.log(params);
